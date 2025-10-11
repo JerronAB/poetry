@@ -5,9 +5,8 @@ description = ""
 date = "2020-10-06T07:38:36+00:00"
 lastmod = "2020-10-12T17:55:25+00:00"
 draft = false
-#author = "Jerron Boling" # Uncomment and replace with your author name if needed
 tags = []
-series = []
+series = "Misc"
 pretty = true
 # dedication = "" # Example custom field
 +++

@@ -7,7 +7,7 @@ lastmod = "2021-09-22T14:47:11+00:00"
 draft = true
 #author = "Jerron Boling" # Uncomment and replace with your author name if needed
 tags = ["mortality/death"]
-series = ["death of a friend"]
+series = "death of a friend"
 pretty = true
 # dedication = "" # Example custom field
 +++

@@ -17,14 +17,18 @@ enableRobotsTXT = true
     weight = 20
 
   [[menus.main]]
+    name = 'All'
+    pageRef = '/poem'
+    weight = 20
+
+  [[menus.main]]
     name = 'Tags'
     pageRef = '/tags'
     weight = 30
 
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = '0.146.0'
+[taxonomies]
+  tag = "tags"
+  series = "series"
 
 [caches] # this is for github pages
   [caches.images]

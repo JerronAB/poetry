@@ -7,7 +7,7 @@ lastmod = "2024-09-10T23:11:25+00:00"
 draft = false
 #author = "Jerron Boling" # Uncomment and replace with your author name if needed
 tags = ["freeform","romance","incomplete"]
-series = []
+series = "My Fiancee"
 pretty = true
 # dedication = "" # Example custom field
 +++

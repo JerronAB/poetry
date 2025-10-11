@@ -1,9 +1,21 @@
 {{ define "main" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <div class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }}">
-    <h2 class="bannerized"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-    </div>
+  <div class="landing">
+    {{ .Content }}
+  </div>
+  {{ $seriesPages := slice }}
+  {{ range $term, $pages := site.Taxonomies.series }}
+    {{ $termPage := site.GetPage (printf "/series/%s" (urlize $term)) }}
+    {{ $seriesPages = $seriesPages | append $termPage }}
+  {{ end }}
+  {{ range sort $seriesPages ".Weight" }}
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ .Summary }}    
+    {{ with .Params.description }}
+      <p>{{ . }}</p>
+    {{ else }}
+      {{ with .Summary }}
+        <p>{{ . }}</p>
+      {{ end }}
+    {{ end }}
   {{ end }}
 {{ end }}

@@ -5,9 +5,8 @@ description = ""
 date = "2025-07-26T01:35:24+00:00"
 lastmod = "2025-07-26T01:35:24+00:00"
 draft = false
-#author = "Jerron Boling" # Uncomment and replace with your author name if needed
-tags = ["romance"]
-series = []
+tags = ["Romance"]
+series = "My Fiancee"
 pretty = true
 +++
 

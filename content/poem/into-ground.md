@@ -3,10 +3,10 @@ title = "into ground"
 subtitle = ""
 description = ""
 date = "2021-10-29T18:04:20+00:00"
-draft = false
+draft = true
 #author = "Jerron Boling" # Uncomment and replace with your author name if needed
 tags = ["freeform"]
-series = []
+series = "Misc"
 pretty = false
 # dedication = "" # Example custom field
 +++

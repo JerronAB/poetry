@@ -6,8 +6,8 @@ date = "2024-11-05T03:22:32+00:00"
 lastmod = "2024-11-05T18:16:45+00:00"
 draft = false
 #author = "Jerron Boling" # Uncomment and replace with your author name if needed
-tags = ["freeform","incomplete"]
-series = []
+tags = ["freeform","incomplete","Math"]
+series = "Misc"
 pretty = false
 # dedication = "" # Example custom field
 computerized = true
@@ -26,8 +26,4 @@ Fixed interpretation, dependent on time
 I will continue to fathom what I cannot see,  
 And hope so much is there.  
 Riding on a complex plane,
-
-  
-
-
-
+...

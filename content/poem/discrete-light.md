@@ -6,8 +6,8 @@ date = "2024-09-14T03:39:15+00:00"
 lastmod = "2024-09-14T04:21:04+00:00"
 draft = false
 #author = "Jerron Boling" # Uncomment and replace with your author name if needed
-tags = ["freeform","incomplete"]
-series = []
+tags = ["freeform","incomplete","technology"]
+series = "Misc"
 pretty = false
 computerized = true
 +++

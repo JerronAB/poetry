@@ -5,7 +5,7 @@ date = "2021-09-22T15:28:47+00:00"
 lastmod = "2021-09-23T20:58:12+00:00"
 draft = false
 tags = ["freeform","mortality/death"]
-series = ["death of a friend"]
+series = "death of a friend"
 pretty = false
 +++
 

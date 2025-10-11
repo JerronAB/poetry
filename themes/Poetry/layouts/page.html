@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1 class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }}">{{ .Title }}</h1>
+  <h3 class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }}">{{ .Params.subtitle }}</h4>
+  <div class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }} poetry">
+    {{ .Content }}
+  </div>
+  
+
+
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date | time.Format ":date_long" }}
+  Written: <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+{{ end }}

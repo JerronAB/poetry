@@ -9,7 +9,7 @@ draft = false
 tags = ["mortality/death"]
 series = "Grandfather"
 pretty = false
-# dedication = "" # Example custom field
+weight = 2
 +++
 
 Your relationship  
@@ -18,9 +18,7 @@ Gradually turned into a symbiosis
 More and more present in you
 
 You needed it, of course  
-But without you, what is *IT*?
-
-A machine without a purpose. 
+But it doesn't have a purpose without you
 
 Family sit around, I can hear your voice in theirs.
 

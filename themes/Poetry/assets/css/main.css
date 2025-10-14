@@ -30,7 +30,7 @@ body {
   padding: 0;
 }
 
-.landing {
+.framed {
   border: 1px solid var(--accent-color);
   margin-bottom: auto;
   padding-left: 5px;
@@ -95,14 +95,11 @@ a {
 
 .computerized {
   font-family: 'Courier New', monospace;
-  font-style: bold;
+  font-weight: 600;
+  letter-spacing: -1px;
 }
 
 .tags_footer {
   margin-bottom: 0%;
   margin-top: 0%;
-}
-
-#main { /* represents the "_index" on our homepage content */ 
-
 }

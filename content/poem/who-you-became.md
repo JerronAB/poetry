@@ -9,18 +9,17 @@ draft = false
 tags = ["mortality/death"]
 series = "death of a friend"
 pretty = false
-# dedication = "" # Example custom field
+weight = 6
 +++
 
 Innocent earth drips from your ears  
 In your sleep  
 Your rest  
-Is remarkable and iridescent tonight
+Is *remarkable and iridescent tonight*
 
 I am forced to wonder   
 Who you were when they found you 
 
-The same mind  
-Empty 
-
-
+The same beautiful mind  
+Became a cocoon  
+Empty now

@@ -9,7 +9,7 @@ draft = false
 tags = ["mortality/death"]
 series = "Grandfather"
 pretty = false
-# dedication = "" # Example custom field
+weight = 99
 +++
 
 I pray that I'll see you  

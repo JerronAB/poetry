@@ -9,7 +9,7 @@ draft = false
 tags = ["mortality/death"]
 series = "death of a friend"
 pretty = false
-# dedication = "" # Example custom field
+weight = 1
 +++
 
 The difference between "not accepting"  

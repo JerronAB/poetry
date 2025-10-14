@@ -9,13 +9,10 @@ draft = false
 tags = ["mortality/death"]
 series = "death of a friend"
 pretty = false
-# dedication = "" # Example custom field
+weight = 5
 +++
 
 As you lay down to sleep forever  
 Your father holds your hand in the casket   
-And I asked myself   
-If you had any meaning left   
-In your bones 
-
-
+And I ask myself   
+If you have any meaning left   

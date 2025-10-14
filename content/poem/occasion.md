@@ -7,6 +7,7 @@ draft = false
 tags = ["freeform","mortality/death"]
 series = "death of a friend"
 pretty = false
+weight = 4
 +++
 
 I had to buy a suit  

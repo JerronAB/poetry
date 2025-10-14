@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <div class="landing">
+  <div class="{{ if .Params.framed }}framed{{ end }}">
     {{ .Content }}
   </div>
   {{ $seriesPages := slice }}

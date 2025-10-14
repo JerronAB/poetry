@@ -9,12 +9,12 @@ draft = false
 tags = ["mortality/death"]
 series = "death of a friend"
 pretty = false
-# dedication = "" # Example custom field
+weight = 99
 +++
 
 At the horizon, in my mind  
 There is an infinite little space  
-Where I can reserve hope that there is no such thing, as **No More**.  
+Where I can reserve hope that there is no such thing, as *no more*.  
 
 I will look into it here and there  
 And think of where you've gone.  

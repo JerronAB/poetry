@@ -1,6 +1,6 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
-  <div id="main">{{ .Content }}</div>
+  <div class="{{ if .Params.framed }}framed{{ end }}">{{ .Content }}</div>
   {{ range .Pages }}
   <div class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }}">
     <h2 class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }} bannerized"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>

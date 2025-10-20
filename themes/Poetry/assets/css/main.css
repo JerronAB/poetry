@@ -1,9 +1,30 @@
-:root {
-  /* Default Colors for the Theme */
-  --text-color: #44290f;
-  --accent-color: #44290f;
-  --accent-bg: #44290f3b;
-  --background-color: #fcf6e0; /* alt: #ffd078 */ 
+/* Default light theme */
+body {
+  --text-color: #492c11;
+  --accent-color: #492c11;
+  --background-color: #fcf5da;
+}
+/* Dark theme colors */
+body.dark-theme {
+  --text-color: #EED7A1;
+  --accent-color: #F5DEB3;
+  --background-color: #14213D;
+}
+
+/* Styles for users who prefer dark mode at the OS level */
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body { 
+    --text-color: #EED7A1;
+    --accent-color: #F5DEB3;
+    --background-color: #14213D;
+  }
+  /* Override dark mode with light mode styles if the user decides to swap */
+  body.light-theme {
+    --text-color: #492c11;
+    --accent-color: #492c11;
+    --background-color: #fcf5da;
+  }
 }
 
 body {

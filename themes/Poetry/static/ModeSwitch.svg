@@ -2,8 +2,8 @@
 <svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
  <g class="layer" display="inline">
   <title>Layer 1</title>
-  <circle cx="237.4" cy="218.6" fill="#fcf5da" id="svg_1" r="137.8" stroke="#001f3f" stroke-width="5" transform="matrix(1 0 0 1 0 0)"/>
-  <circle cx="156.8" cy="218.7" fill="#001f3f" id="svg_2" r="137.8" stroke="#fcf5da" stroke-width="5"/>
+  <circle cx="237.4" cy="218.6" fill="#fcf5da" id="svg_1" r="137.8" stroke="#242525" stroke-width="5" transform="matrix(1 0 0 1 0 0)"/>
+  <circle cx="156.8" cy="218.7" fill="#242525" id="svg_2" r="137.8" stroke="#fcf5da" stroke-width="5"/>
   <path fill="#001f3f" id="svg_3" stroke="#001f3f" stroke-width="5" transform="matrix(1 0 0 1 0 0) scale(1 1)"/>
  </g>
 </svg>

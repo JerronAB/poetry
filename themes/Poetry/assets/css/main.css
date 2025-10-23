@@ -8,7 +8,7 @@ body {
 body.dark-theme {
   --text-color: #EED7A1;
   --accent-color: #F5DEB3;
-  --background-color: #14213D;
+  --background-color: #242525;
 }
 
 /* Styles for users who prefer dark mode at the OS level */
@@ -17,7 +17,7 @@ body.dark-theme {
   body { 
     --text-color: #EED7A1;
     --accent-color: #F5DEB3;
-    --background-color: #14213D;
+    --background-color: #242525;
   }
   /* Override dark mode with light mode styles if the user decides to swap */
   body.light-theme {
@@ -115,9 +115,9 @@ a {
 }
 
 .computerized {
-  font-family: 'Courier New', monospace;
+  /*font-family: 'Courier New', monospace;
   font-weight: 600;
-  letter-spacing: -1px;
+  letter-spacing: -.5px;*/
 }
 
 .tags_footer {

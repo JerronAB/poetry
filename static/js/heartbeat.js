@@ -16,7 +16,8 @@ function startHeartbeatTracking() {
             visitId: visitId,
             url: window.location.href,
             duration: durationOnPage,
-            timestamp: new Date().toISOString()
+            timestamp: new Date().toISOString(),
+            referrer: document.referrer
         };
 
         try {

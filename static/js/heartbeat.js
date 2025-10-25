@@ -1,7 +1,7 @@
 function startHeartbeatTracking() {
     //URL for the backend endpoint
-    //const BACKEND_URL = 'https://log.okpoems.com/heartbeat';
-    const BACKEND_URL = 'http://localhost:8080/heartbeat';
+    const BACKEND_URL = 'https://log.okpoems.com/heartbeat';
+    //const BACKEND_URL = 'http://localhost:8080/heartbeat';
     const visitId = crypto.randomUUID();
     const startTime = Date.now();
 

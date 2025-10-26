@@ -1,14 +1,14 @@
 +++
-title = "black"
+title = "Black"
 subtitle = ""
 description = ""
 date = "2021-09-22T14:37:45+00:00"
 lastmod = "2021-09-22T14:47:11+00:00"
-draft = true
+draft = false
 #author = "Jerron Boling" # Uncomment and replace with your author name if needed
 tags = ["mortality/death"]
 series = "death of a friend"
-pretty = true
+weight = 3
 # dedication = "" # Example custom field
 +++
 

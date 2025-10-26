@@ -1,7 +1,7 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
   <div class="{{ if .Params.framed }}framed{{ end }}">{{ .Content }}</div>
-  {{ range .Pages }}
+  {{ range .Pages.ByDate.Reverse }}
   <div class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }}">
     <h2 class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }} bannerized"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     {{ .Summary }}

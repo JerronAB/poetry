@@ -11,12 +11,17 @@ function startHeartbeatTracking() {
         //Calculate time on page in seconds
         const durationOnPage = (Date.now() - startTime) / 1000; // in seconds
         
+        //timezone
+        const now = new Date();
+        const localTime = now.toLocaleString();
+        const timeZoneShort = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
         //Gather page data
         const pageData = {
             visitId: visitId,
             url: window.location.href,
             duration: durationOnPage,
-            timestamp: new Date().toISOString(),
+            timestamp: `${localTime} (${timeZoneShort})`,
             referrer: document.referrer
         };
 

@@ -13,6 +13,12 @@
   <footer>
     {{ partial "footer.html" . }}
   </footer>
-  <script src="/js/heartbeat.js"></script>
+  {{ $js := resources.Get "js/heartbeat.js" }}
+  {{ if hugo.IsProduction }}
+      {{/* Minify the script only in production */}}
+      {{ $js = $js | js.Build | resources.Minify }}
+  {{ end }}
+  {{/* Use the Fingerprint to bust browser cache */}}
+  <script src="{{ $js.RelPermalink }}" defer integrity="{{ $js.Data.Integrity }}"></script>
 </body>
 </html>

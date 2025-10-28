@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="prefetch" href="/poem/">
-<!-- hardcoded this b/c I want it to be different than regular title --> <!-- {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | OK Poems" .Title site.Title }}{{ end }} -->
+<!-- hardcoded this title b/c I want it to be different than regular title --> <!-- {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | OK Poems" .Title site.Title }}{{ end }} -->
 <title>{{ printf "%s | OK Poems" .Title }}</title>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}

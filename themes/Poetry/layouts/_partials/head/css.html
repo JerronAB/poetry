@@ -1,3 +1,9 @@
+{{- with $style := resources.Get "css/main.css" | resources.Minify }}
+  <style>{{ $style.Content | safeCSS }}</style>
+{{- end }}
+
+<!-- ORIGINAL/HUGO DEFAULT: -->
+<!--
 {{- with resources.Get "css/main.css" }}
   {{- if hugo.IsDevelopment }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
@@ -7,3 +13,4 @@
     {{- end }}
   {{- end }}
 {{- end }}
+--> 

@@ -1,6 +1,7 @@
 {{ define "main" }}
   <h1 class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }}">{{ .Title }}</h1>
-  <h3 class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }}">{{ .Params.subtitle }}</h4>
+  <h3 class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }}">{{ .Params.subtitle }}</h3>
+  <p class="{{ if .Params.framed }}framed{{ end }}" style="margin-bottom: 30px;">{{ .Params.description }}</p>
   <div class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }} poetry">
     {{ .Content }}
   </div>

@@ -15,8 +15,6 @@ You natural, interesting people, talk.
 Suave and vital characters that  
 Fit together like puzzle pieces  
 
-Each of you is a calm outline  
-With a perfect ready spot available  
 I watch you settle with so much comfort  
 In the same room as me  
 Even as you talk to me,  

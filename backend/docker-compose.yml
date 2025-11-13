@@ -1,0 +1,22 @@
+services:
+  cloudflare-tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: mntn-cf-tunnel
+    depends_on:
+      - 'generator'
+    command:
+      - tunnel
+      - --no-autoupdate
+      - run
+      - --token
+      - ${CLOUDFLARE_TOKEN}
+    restart: unless-stopped
+
+  generator:
+    image: python:3.14
+    container_name: python-container
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python -OO heartbeat_logger.py
+    restart: unless-stopped

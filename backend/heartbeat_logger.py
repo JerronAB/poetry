@@ -5,7 +5,7 @@ from datetime import datetime
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 LOG_FILE = 'heartbeat_log.csv'
-LOG_FIELDNAMES = ['server_timestamp', 'visit_id', 'url', 'referrer', 'duration_on_page', 'client_timestamp']
+LOG_FIELDNAMES = ['server_timestamp', 'visit_id', 'url', 'referrer', 'duration_on_page', 'client_timestamp','state_description']
 
 def initialize_csv():
     file_exists = os.path.isfile(LOG_FILE)
@@ -46,6 +46,7 @@ class HeartbeatHandler(BaseHTTPRequestHandler):
                 referrer = data.get('referrer')
                 duration = data.get('duration')
                 client_timestamp = data.get('timestamp')
+                state_descriptor = data.get('stateDesc')
                 if not all([visit_id, url, duration is not None]):
                     #self._send_response(400, {"status": "error", "message": "Missing required data"})
                     print(f"Some data missing: {data}")
@@ -61,7 +62,8 @@ class HeartbeatHandler(BaseHTTPRequestHandler):
                     url,
                     referrer,
                     f"{duration:.2f}",
-                    client_timestamp
+                    client_timestamp,
+                    state_descriptor
                 ]
                 with open(LOG_FILE, mode='a', newline='', encoding='utf-8') as f:
                     writer = csv.writer(f)
@@ -79,7 +81,7 @@ class HeartbeatHandler(BaseHTTPRequestHandler):
             self._send_response(404, {"status": "error", "message": "Not Found"})
 
     def do_GET(self):
-        if self.path.startswith('/log') or self.path.startswith('/stat') or self.path.startswith('/data'): #haven't decided yet
+        if self.path.startswith('/log'):
             #just return the text from the entire log file for now
             #as an page of text (this will be a regular GET request, not POST)
             with open("heartbeat_log.csv", "r") as log:

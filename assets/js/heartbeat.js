@@ -1,48 +1,52 @@
-function startHeartbeatTracking() {
-    //URL for the backend endpoint
-    const BACKEND_URL = 'https://log.okpoems.com/heartbeat';
-    //const BACKEND_URL = 'http://localhost:8080/heartbeat';
-    const visitId = crypto.randomUUID();
-    const startTime = Date.now();
+const BACKEND_URL = 'https://log.okpoems.com/heartbeat';
+//const BACKEND_URL = 'http://localhost:8080/heartbeat';
+const startTime = Date.now();
 
-    console.log(`Starting heartbeat tracking for visit: ${visitId}`);
+let visitId;
+cookieStore.get('visitId').then(async cookie => {
+  if (cookie && cookie.value) {
+    // Cookie exists
+    console.log(`Cookie Present: ${cookie.value}`)
+    visitId = cookie.value;
+  } else {
+    // Cookie does not exist — create one
+    visitId = crypto.randomUUID().substring(0, 6);
+    cookieStore.set({
+      name: 'visitId',
+      value: visitId,
+      // optional:
+      sameSite: 'lax'
+    });
+  }
+  console.log(`Starting heartbeat for visit: ${visitId}`);
+  pulse("init_load")
+});
 
-    async function sendHeartbeat() {
-        //Calculate time on page in seconds
-        const durationOnPage = (Date.now() - startTime) / 1000; // in seconds
-        
-        //timezone
-        const now = new Date();
-        const localTime = now.toLocaleString();
-        const timeZoneShort = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-        //Gather page data
-        const pageData = {
-            visitId: visitId,
-            url: window.location.href,
-            duration: durationOnPage,
-            timestamp: `${localTime} (${timeZoneShort})`,
-            referrer: document.referrer
-        };
-
-        try {
-            const response = await fetch(BACKEND_URL, {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(pageData)
-            });
-
-            if (!response.ok) {
-                console.error('Heartbeat request failed:', response.statusText);
-            }
-        } catch (error) {
-            console.error('Error sending heartbeat:', error);
-        }
-    }
-
-    //Send the first heartbeat immediately and then every 5 seconds
-    sendHeartbeat();
-    setInterval(sendHeartbeat, 5000);
+function pulse(state_descriptor) {
+    //Calculate time on page in seconds
+    const durationOnPage = (Date.now() - startTime) / 1000; // in seconds
+    //timezone
+    const now = new Date();
+    const localTime = now.toLocaleString().replace(", "," ");
+    const timeZoneShort = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    //Gather page data
+    const pageData = {
+        visitId: visitId,
+        url: window.location.href,
+        duration: durationOnPage,
+        timestamp: `${localTime} (${timeZoneShort})`,
+        referrer: document.referrer,
+        stateDesc: state_descriptor
+    };
+    navigator.sendBeacon(BACKEND_URL, JSON.stringify(pageData));
 }
 
-startHeartbeatTracking()
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") {
+    console.log(`Sending heartbeat for vis change. `);
+    pulse("page_hidden")
+  } else if (document.visibilityState === "visible") {
+    console.log(`Sending heartbeat for vis change. `);
+    pulse("page_viewed")
+  }
+});

@@ -2,11 +2,11 @@
 title = "Glory Cloth"
 subtitle = ""
 description = ""
-framed = true
+framed = false
 date = "2025-10-31T17:34:02+00:00"
 draft = false
 #author = "Jerron Boling" # Uncomment and replace with your author name if needed
-tags = ["freeform","mortality/death"]
+tags = ["freeform", "mortality/death"]
 series = "Glory"
 pretty = false
 weight = 98

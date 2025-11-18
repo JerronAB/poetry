@@ -73,6 +73,9 @@ header {
   padding-left: 5px;
   padding-right: 5px;
 }
+.framed p {
+  margin: 3px;
+}
 
 ul {
   margin-top: 0%;

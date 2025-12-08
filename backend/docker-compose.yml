@@ -1,7 +1,7 @@
 services:
   cloudflare-tunnel:
     image: cloudflare/cloudflared:latest
-    container_name: mntn-cf-tunnel
+    container_name: cf-tunnel
     depends_on:
       - 'generator'
     command:

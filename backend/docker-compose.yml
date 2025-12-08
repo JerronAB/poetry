@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
 
   logger:
-    image: python:3.14-slim-alpine
+    image: python:3.14-alpine
     container_name: heartbeat-logger
     volumes:
       - .:/app

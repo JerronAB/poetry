@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <style>
+            /* Default light theme */
+            body {
+            --text-color: #492c11;
+            --accent-color: #492c11;
+            --background-color: #fcf5da;
+            }
+            /* Dark theme colors */
+            body.dark-theme {
+            --text-color: #EED7A1;
+            --accent-color: #F5DEB3;
+            --background-color: #242525;
+            }
+
+            /* Styles for users who prefer dark mode at the OS level */
+            @media (prefers-color-scheme: dark) {
+            /* defaults to dark theme */
+            body { 
+                --text-color: #EED7A1;
+                --accent-color: #F5DEB3;
+                --background-color: #242525;
+            }
+            /* Override dark mode with light mode styles if the user decides to swap */
+            body.light-theme {
+                --text-color: #492c11;
+                --accent-color: #492c11;
+                --background-color: #fcf5da;
+            }
+            }
+
+            @media (min-width: 800px) {
+            body {
+                font-size: large;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            }
+            @media (max-width: 800px) {
+            body {
+                margin: 1rem;
+            }
+            }
+
+            body {
+                color: var(--text-color);
+                font-family: 'Times New Roman', Times, serif;
+                line-height: 1.5;
+                max-width: 768px;
+                background-color: var(--background-color);
+            }
+            div {
+                align-items: center;
+            }
+            th {
+                border-bottom: 1px solid var(--accent-color);
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            td {
+                padding-bottom: 15px;
+                text-align: center;
+            }
+            h1 {
+                border-bottom: 1px solid var(--accent-color);
+            }
+        </style>
+    </head>
+<body>
+    <div>
+    <h1>Simple File Share</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <p>File: </p>
+        <input type="file" name="file">
+        <p>Hours until file expires: </p>
+        <input type="number" name="expireHours">
+        <br>
+        <input type="submit" value="Upload File">
+    </form>
+    <table>
+        <thead>
+                <th>Filename</th>
+                <th>Uploaded On</th>
+                <th>Expires On</th>
+                <th>Download</th>
+        </thead>
+        <tbody>
+            {{range $linkExt, $File := .}}
+            <tr>
+            <td>{{$File.Filename}}</td>
+            <td>{{$File.UploadedOn}}</td>
+            <td>{{$File.ExpiresOn}}</td>
+            <td><a href="/download/{{$linkExt}}">Link</a></td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>

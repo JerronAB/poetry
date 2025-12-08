@@ -12,11 +12,17 @@ services:
       - ${CLOUDFLARE_TOKEN}
     restart: unless-stopped
 
-  generator:
-    image: python:3.14
-    container_name: python-container
+  logger:
+    image: python:3.14-slim-alpine
+    container_name: heartbeat-logger
     volumes:
       - .:/app
     working_dir: /app
     command: python -OO heartbeat_logger.py
     restart: unless-stopped
+
+  simplefileserver:
+    build:
+      context: ./simplefileserver
+    container_name: simplefileserver
+    restart: always

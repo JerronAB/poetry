@@ -3,7 +3,7 @@ services:
     image: cloudflare/cloudflared:latest
     container_name: cf-tunnel
     depends_on:
-      - 'generator'
+      - 'logger'
     command:
       - tunnel
       - --no-autoupdate

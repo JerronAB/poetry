@@ -118,11 +118,13 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func removeExpired() {
+	mu.Lock()
 	for key, file := range files {
 		if file.isExpired() {
 			delete(files, key)
 		}
 	}
+	mu.Unlock()
 }
 
 func main() {

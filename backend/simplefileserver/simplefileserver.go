@@ -64,7 +64,7 @@ func generateLink() string {
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
 	log.Print(files)
-	removeExpired()
+	go removeExpired()
 	t, err := template.ParseFiles("sfs.html")
 	if err != nil {
 		fmt.Fprintf(w, "Error loading template: %v", err)

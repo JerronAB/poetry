@@ -36,7 +36,10 @@ function pulse(state_descriptor) {
         duration: durationOnPage,
         timestamp: `${localTime} (${timeZoneShort})`,
         referrer: document.referrer,
-        stateDesc: state_descriptor
+        stateDesc: state_descriptor,
+        clientInfo: {
+            userAgent: navigator.userAgent,
+        }
     };
     navigator.sendBeacon(BACKEND_URL, JSON.stringify(pageData));
 }

@@ -47,6 +47,7 @@ class HeartbeatHandler(BaseHTTPRequestHandler):
                 duration = data.get('duration')
                 client_timestamp = data.get('timestamp')
                 state_descriptor = data.get('stateDesc')
+                client_infodump = data.get('clientInfo')
                 if not all([visit_id, url, duration is not None]):
                     #self._send_response(400, {"status": "error", "message": "Missing required data"})
                     print(f"Some data missing: {data}")
@@ -63,7 +64,8 @@ class HeartbeatHandler(BaseHTTPRequestHandler):
                     referrer,
                     f"{duration:.2f}",
                     client_timestamp,
-                    state_descriptor
+                    state_descriptor,
+                    client_infodump
                 ]
                 with open(LOG_FILE, mode='a', newline='', encoding='utf-8') as f:
                     writer = csv.writer(f)

@@ -1,7 +1,7 @@
 +++
 date = '2025-04-21T09:19:46-05:00'
 draft = false
-title = 'Death of a Friend'
+title = 'Meaning Left'
 weight = 2
 description = ' '
 +++

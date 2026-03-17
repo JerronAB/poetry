@@ -4,9 +4,23 @@
     {{ .Content }}
   </div>
   {{ range .Pages }}
-  <div class="{{ if .Params.pretty }}pretty{{ end }} {{ if .Params.computerized }}computerized{{ end }}">
+  <div {{ if or .Params.pretty .Params.computerized }} class="{{ if .Params.pretty }}pretty{{ end }}{{ if .Params.computerized }} computerized{{ end }}"{{ end }}>
     <h2 class="bannerized"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     {{ .Summary }}
   </div>
 {{ end }}
+<!-- Pyodide from CDN -->
+<script src="https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js" defer></script>
+{{ $js := resources.Get "js/CountAndHighlight.js" }}
+  {{ if hugo.IsProduction }}
+      {{/* Minify the script only in production */}}
+      {{ $js = $js | js.Build | resources.Minify }}
+  {{ end }}
+  {{/* Use the Fingerprint to bust browser cache */}}
+  <script src="{{ $js.RelPermalink }}" defer integrity="{{ $js.Data.Integrity }}"></script>
+
+  {{- with $style := resources.Get "/css/animateHighlights.css" | resources.Minify }}
+  <style>{{ $style.Content | safeCSS }}</style>
+  {{- end }}
+
 {{ end }}

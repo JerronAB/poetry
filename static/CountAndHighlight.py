@@ -16,7 +16,7 @@ def main():
     print(f'Words of this frequency are eligible: {elig_counts}')
     eligible_words = [word for word, count in counter_dict.items() if count in elig_counts]
     print(eligible_words)
-    display_n_words = randint(1,3) #display 1-3 words
+    display_n_words = randint(2,3) #display 2-3 words
     shuffle(eligible_words)
     return eligible_words[:display_n_words]
     

@@ -1,0 +1,3 @@
+$env:Path +=  ";$HOME\Downloads\go\bin\;$HOME\Downloads\tinygo\bin\;$HOME\Downloads\binaryen-version_128\bin\;"
+$env:GOOS="js"; $env:GOARCH="wasm"; tinygo build -scheduler=none -gc=leaking -no-debug -panic=trap -opt=z -o wasm.wasm ./main.go
+wasm-opt -Oz wasm.wasm -o wasm.wasm

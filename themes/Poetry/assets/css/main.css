@@ -18,12 +18,14 @@ body.dark-theme {
   /* defaults to dark theme */
   body { 
     --text-color: #EED7A1;
+    --text-highlight-color: #EED7A1;
     --accent-color: #F5DEB3;
     --background-color: #242525;
   }
   /* Override dark mode with light mode styles if the user decides to swap */
   body.light-theme {
     --text-color: #492c11;
+    --text-highlight-color: #492c11;
     --accent-color: #492c11;
     --background-color: #fcf5da;
   }

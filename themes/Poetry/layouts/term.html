@@ -18,7 +18,6 @@
   {{/* Use the Fingerprint to bust browser cache */}}
   <script src="{{ $wasm.RelPermalink }}" defer integrity="{{ $wasm.Data.Integrity }}"></script>
 
-<script src="/js/wasm_exec.js" defer></script>
 {{ $js := resources.Get "js/CountAndHighlight.js" }}
   {{ if hugo.IsProduction }}
       {{/* Minify the script only in production */}}

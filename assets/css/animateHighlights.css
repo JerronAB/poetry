@@ -1,15 +1,15 @@
 h-me {
     color: var(--text-color);
-    text-shadow: 0 0 5px #EED7A1, 0 0 10px #EED7A1, 0 0 35px #EED7A1;
+    text-shadow: 0 0 5px var(--text-highlight-color), 0 0 10px var(--text-highlight-color), 0 0 35px var(--text-highlight-color);
     animation: glow 2s infinite alternate
 }
 
 @keyframes glow {
     0% {
-        text-shadow: 0 0 5px #EED7A1, 0 0 10px #EED7A1, 0 0 35px #EED7A1
+        text-shadow: 0 0 5px var(--text-highlight-color), 0 0 10px var(--text-highlight-color), 0 0 35px var(--text-highlight-color)
     }
 
     100% {
-        text-shadow: 0 0 1px #EED7A1, 0 0 0px #EED7A1, 0 0 0px #EED7A1
+        text-shadow: 0 0 1px var(--text-highlight-color), 0 0 0px var(--text-highlight-color), 0 0 0px var(--text-highlight-color)
     }
 }

@@ -1,14 +1,15 @@
 h-me {
     color: var(--text-color);
-    text-shadow: 0 0 5px #008b3a, 0 0 10px #008b3a, 0 0 35px #008b3a;
-    animation: glow 2s infinite alternate;
+    text-shadow: 0 0 5px #EED7A1, 0 0 10px #EED7A1, 0 0 35px #EED7A1;
+    animation: glow 2s infinite alternate
 }
 
 @keyframes glow {
     0% {
-        text-shadow: 0 0 5px #008b3a, 0 0 10px #008b3a, 0 0 35px #008b3a;
+        text-shadow: 0 0 5px #EED7A1, 0 0 10px #EED7A1, 0 0 35px #EED7A1
     }
+
     100% {
-        text-shadow: 0 0 5px #008cff, 0 0 10px #008cff, 0 0 25px #008cff;
+        text-shadow: 0 0 1px #EED7A1, 0 0 0px #EED7A1, 0 0 0px #EED7A1
     }
 }

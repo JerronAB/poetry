@@ -1,7 +1,7 @@
 /* Default light theme */
 body {
   --text-color: #492c11;
-  --text-highlight-color: #492c11;
+  --text-highlight-color: #492c11a6;
   --accent-color: #492c11;
   --background-color: #fcf5da;
 }

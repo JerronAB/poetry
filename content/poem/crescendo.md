@@ -22,7 +22,7 @@ I ask that you be mine, forever.
 
 ---
 
-You breath contentment   
+You breathe contentment   
 For the first time.   
 Your body has shown your acceptance. 
 

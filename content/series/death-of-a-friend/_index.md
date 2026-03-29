@@ -5,4 +5,4 @@ title = 'Meaning Left'
 weight = 2
 description = ' '
 +++
-This series was written after a good friend passed away as a result of Type 1 diabetes. He passed in his sleep, unexpectedly, at 21. 
+This series was written after a good friend passed away as a result of type 1 diabetes. He passed in his sleep, unexpectedly, at 21. 

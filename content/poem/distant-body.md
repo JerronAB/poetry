@@ -34,7 +34,7 @@ That hasn't always been there.
 Bright orange--where is it coming from?  
 I broaden my search  
 Eyes sweeping rapidly across you  
-Until at once, the gestalt before me comes into focus  
+Until at once, the gestalt comes into focus  
 You are lit from underneath  
 Your entire being  
 Has an iron-hot silhouette  

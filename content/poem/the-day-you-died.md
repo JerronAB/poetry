@@ -11,7 +11,7 @@ pretty = false
 weight = 99
 +++
 
-Your paper skin hides the event  
+Your paper skin barely hides the event  
 Loud, violent, beautiful  
 Raging deep red and
 Scorching through its confinement  

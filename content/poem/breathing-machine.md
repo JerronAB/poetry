@@ -7,7 +7,7 @@ lastmod = "2022-10-19T01:18:47+00:00"
 draft = false
 #author = "Jerron Boling" # Uncomment and replace with your author name if needed
 tags = ["mortality/death"]
-series = "Misc."
+series = "Misc"
 pretty = false
 weight = 2
 +++
